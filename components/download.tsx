@@ -28,13 +28,13 @@ export default function DownloadComponent() {
   // Hàm xử lý khi bấm tải cho người dùng
   const handleDownloadUser = () => {
     console.log("Đang tải APK cho người dùng...")
-    window.location.href = "https://expo.dev/artifacts/eas/eCsTiHsRhodirejW6LdA9L.apk" // Link APK người dùng
+    window.location.href = "https://github.com/kacode357/downloadapk/releases/download/testdownloadapk/Mam.Map.2.0.6.apk" // Link APK người dùng
   }
 
   // Hàm xử lý khi bấm tải cho chủ quán
   const handleDownloadMerchant = () => {
     console.log("Đang tải APK cho chủ quán...")
-    window.location.href = "https://expo.dev/artifacts/eas/2oP5aPLFM1cWyNywN9a9d.apk" // Link APK chủ quán
+    window.location.href = "https://github.com/kacode357/downloadapk/releases/download/testdownloadapk/Merchant.2.0.6.apk" // Link APK chủ quán
   }
 
   const userFeatures = [
