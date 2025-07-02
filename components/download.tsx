@@ -34,7 +34,7 @@ export default function DownloadComponent() {
   // Hàm xử lý khi bấm tải cho chủ quán
   const handleDownloadMerchant = () => {
     console.log("Đang tải APK cho chủ quán...")
-    window.location.href = "https://expo.dev/accounts/beyija9804/projects/m-merchant/builds/303cc839-f2d1-40d7-9f1b-e9dd5d607ce6" // Link APK chủ quán
+    window.location.href = "https://expo.dev/artifacts/eas/2oP5aPLFM1cWyNywN9a9d.apk" // Link APK chủ quán
   }
 
   const userFeatures = [
