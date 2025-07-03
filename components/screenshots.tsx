@@ -8,43 +8,39 @@ export default function Screenshots() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
 
+  // Tao đã cập nhật mảng này với ảnh của mày
   const screenshots = [
     {
       title: "Trang chủ thông minh",
       description: "Giao diện thân thiện với gợi ý món ăn cá nhân hóa",
-      image: "/placeholder.svg?height=600&width=300",
+      image: "/images/home.jpg", // Đã thay
       category: "user",
     },
     {
       title: "Chatbot AI",
       description: "Trò chuyện với AI để tìm món ăn phù hợp",
-      image: "/placeholder.svg?height=600&width=300",
+      image: "/images/aichat.jpg", // Đã thay
       category: "user",
     },
     {
       title: "Bản đồ quán ăn",
       description: "Tìm kiếm quán ăn gần bạn với bản đồ tương tác",
-      image: "/placeholder.svg?height=600&width=300",
+      image: "/images/map.jpg", // Đã thay
       category: "user",
     },
     {
       title: "Dashboard chủ quán",
       description: "Quản lý quán ăn và theo dõi doanh thu",
-      image: "/placeholder.svg?height=600&width=300",
+      image: "/images/dashboardadmin.jpg", // Đã thay
       category: "merchant",
     },
     {
       title: "AI tạo ảnh món ăn",
       description: "Tạo ảnh món ăn chuyên nghiệp bằng AI",
-      image: "/placeholder.svg?height=600&width=300",
+      image: "/images/aiimage.jpg", // Đã thay
       category: "merchant",
     },
-    {
-      title: "Quản lý đánh giá",
-      description: "Theo dõi và phản hồi đánh giá khách hàng",
-      image: "/placeholder.svg?height=600&width=300",
-      category: "merchant",
-    },
+   
   ]
 
   useEffect(() => {

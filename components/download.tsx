@@ -172,9 +172,9 @@ export default function DownloadComponent() {
                           {/* Notch */}
                           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-10"></div>
 
-                          {/* Screenshot */}
+                          {/* ẢNH CỦA USER ĐÂY NHÉ */}
                           <img
-                            src="/placeholder.svg?height=600&width=300"
+                            src="/images/userloign.jpg"
                             alt="Măm Map User App"
                             className="w-full h-[600px] object-cover"
                           />
@@ -219,9 +219,9 @@ export default function DownloadComponent() {
                           {/* Notch */}
                           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-10"></div>
 
-                          {/* Screenshot */}
+                          {/* ẢNH CỦA CHỦ QUÁN ĐÂY NHÉ */}
                           <img
-                            src="/placeholder.svg?height=600&width=300"
+                            src="/images/loginmerchant.jpg"
                             alt="Măm Map Merchant App"
                             className="w-full h-[600px] object-cover"
                           />

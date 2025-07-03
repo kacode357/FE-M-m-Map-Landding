@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Download, Bell, Search } from "lucide-react"
+// Tao đã bỏ "Bell" khỏi dòng import này
+import { Menu, X, Download, Search } from "lucide-react"
 import Image from "next/image"
 
 export default function Header() {
@@ -30,8 +31,8 @@ export default function Header() {
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-   <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <div
             className="font-baloo text-2xl md:text-3xl font-bold text-mam-orange cursor-pointer hover:scale-105 transition-transform duration-300 flex items-center"
@@ -92,10 +93,8 @@ export default function Header() {
             <button className="p-2 text-gray-600 hover:text-mam-orange transition-colors duration-300">
               <Search className="w-5 h-5" />
             </button>
-            <button className="p-2 text-gray-600 hover:text-mam-orange transition-colors duration-300 relative">
-              <Bell className="w-5 h-5" />
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-            </button>
+            {/* Cái button chứa icon Bell ở đây đã bị tao xóa đi rồi nhé.
+            */}
             <button
               onClick={() => scrollToSection("download")}
               className="bg-mam-orange hover:bg-orange-600 text-white px-4 py-2 rounded-full font-comfortaa font-medium text-sm transition-all duration-300 hover:scale-105 flex items-center"
@@ -107,7 +106,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-700 hover:text-mam-orange transition-colors duration-300"
+            className="lg:hidden p-2 text-gray-700 hover:text-mam-orange transition-colors duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -116,8 +115,8 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden transition-all duration-300 overflow-hidden ${
+            isMenuOpen ? "max-h-dvh opacity-100" : "max-h-0 opacity-0"
           }`}
         >
           <div className="py-4 space-y-2 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">

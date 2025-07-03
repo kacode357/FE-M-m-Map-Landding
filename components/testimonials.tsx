@@ -1,19 +1,20 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
+// Tao đã thêm icon User vào đây
+import { Star, Quote, ChevronLeft, ChevronRight, User } from "lucide-react"
 
 export default function Testimonials() {
   const [isVisible, setIsVisible] = useState(false)
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
 
+  // Tao đã bỏ trường 'avatar' ra khỏi mảng này
   const testimonials = [
     {
       name: "Nguyễn Minh Anh",
       role: "Food Blogger",
       location: "Hà Nội",
-      avatar: "/placeholder.svg?height=80&width=80",
       rating: 5,
       content:
         "Măm Map thực sự là ứng dụng tuyệt vời! AI chatbot rất thông minh, luôn gợi ý đúng món ăn theo sở thích của tôi. Giao diện tiếng Việt rất thân thiện và dễ sử dụng.",
@@ -23,7 +24,6 @@ export default function Testimonials() {
       name: "Trần Văn Hùng",
       role: "Chủ quán Phở Hùng",
       location: "TP.HCM",
-      avatar: "/placeholder.svg?height=80&width=80",
       rating: 5,
       content:
         "Từ khi sử dụng Măm Map, quán tôi có thêm nhiều khách hàng mới. Tính năng AI tạo ảnh món ăn giúp quán tôi có những hình ảnh đẹp mắt để quảng bá.",
@@ -33,7 +33,6 @@ export default function Testimonials() {
       name: "Lê Thị Mai",
       role: "Nhân viên văn phòng",
       location: "Đà Nẵng",
-      avatar: "/placeholder.svg?height=80&width=80",
       rating: 5,
       content:
         "Mình rất thích tính năng tìm quán ăn gần đây của Măm Map. Chỉ cần hỏi AI là có ngay danh sách quán ngon, tiết kiệm thời gian tìm kiếm rất nhiều.",
@@ -43,7 +42,6 @@ export default function Testimonials() {
       name: "Phạm Đức Thành",
       role: "Chủ quán Bún Bò Huế",
       location: "Huế",
-      avatar: "/placeholder.svg?height=80&width=80",
       rating: 5,
       content:
         "Măm Map giúp tôi quản lý đánh giá khách hàng một cách chuyên nghiệp. Tôi có thể phản hồi nhanh chóng và cải thiện chất lượng phục vụ.",
@@ -53,7 +51,6 @@ export default function Testimonials() {
       name: "Hoàng Thị Lan",
       role: "Sinh viên",
       location: "Hà Nội",
-      avatar: "/placeholder.svg?height=80&width=80",
       rating: 5,
       content:
         "Là sinh viên với ngân sách hạn chế, Măm Map giúp mình tìm được những quán ăn ngon mà giá cả phải chăng. AI hiểu rõ nhu cầu của mình.",
@@ -63,7 +60,6 @@ export default function Testimonials() {
       name: "Vũ Minh Tuấn",
       role: "Chủ chuỗi quán Cơm Tấm",
       location: "TP.HCM",
-      avatar: "/placeholder.svg?height=80&width=80",
       rating: 5,
       content:
         "Với 5 chi nhánh, Măm Map giúp tôi quản lý tất cả một cách hiệu quả. Doanh thu tăng 30% sau 3 tháng sử dụng ứng dụng.",
@@ -178,11 +174,10 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="flex items-center justify-center">
-                  <img
-                    src={testimonials[currentTestimonial].avatar || "/placeholder.svg"}
-                    alt={testimonials[currentTestimonial].name}
-                    className="w-16 h-16 rounded-full object-cover mr-4 shadow-lg"
-                  />
+                  {/* Chỗ này tao thay img bằng icon */}
+                  <div className="w-16 h-16 rounded-full bg-mam-orange/20 flex items-center justify-center mr-4 shadow-lg">
+                    <User className="w-8 h-8 text-mam-orange" />
+                  </div>
                   <div className="text-center">
                     <div className="font-comfortaa font-bold text-gray-800 text-lg">
                       {testimonials[currentTestimonial].name}
@@ -224,11 +219,10 @@ export default function Testimonials() {
               className="bg-white/60 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-white/20"
             >
               <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.avatar || "/placeholder.svg"}
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-3"
-                />
+                {/* Chỗ này tao cũng thay img bằng icon */}
+                <div className="w-12 h-12 rounded-full bg-mam-orange/20 flex items-center justify-center mr-3">
+                    <User className="w-6 h-6 text-mam-orange" />
+                </div>
                 <div>
                   <div className="font-comfortaa font-bold text-gray-800">{testimonial.name}</div>
                   <div className="font-comfortaa text-mam-orange text-sm">{testimonial.role}</div>
